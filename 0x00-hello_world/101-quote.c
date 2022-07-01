@@ -2,6 +2,7 @@
 /**
 * main - printing the last part of the quote
 * return: 1 (success)
+*
 */
 int main(void)
 {
