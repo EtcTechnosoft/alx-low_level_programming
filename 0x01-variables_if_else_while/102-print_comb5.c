@@ -8,18 +8,18 @@ int main(void)
 {
 	int a, b, c, d;
 
-	a = b = c = d = 21;
+	a = b = c = d = 48;
 
-	while (a <= 52)
+	while (a <= 57)
 	{
-	b = 21;
-	while (b <= 52)
+	b = 48;
+	while (b <= 57)
 	{
-	c = 21;
-	while (c <= 52)
+	c = 48;
+	while (c <= 57)
 	{
-	d = 21;
-	while (d <= 52)
+	d = 48;
+	while (d <= 57)
 	{
 	if ((a == c && b < d) || (a < c && b <= d) || (a < c && b >= d))
 	{
@@ -28,7 +28,7 @@ int main(void)
 	putchar(' ');
 	putchar(c);
 	putchar(d);
-	if (a == 52 && b == 51 && c == 52 && d == 52)
+	if (a == 57 && b == 56 && c == 57 && d == 57)
 	{
 	break;
 	}
