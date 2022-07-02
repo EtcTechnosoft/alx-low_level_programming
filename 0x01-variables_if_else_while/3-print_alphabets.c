@@ -8,17 +8,10 @@ int main(void)
 {
 	char c;
 
-	c = 'a';
-
-	while (c <= 'z')
-	{
-	if (c == 'e' || c == 'q')
-	{
-	c += 1;
-	}
-	putchar(c);
-	c += 1;
-	}
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+	for (c = 'A'; c <= 'Z'; c++)
+		putchar (c)
 	putchar('\n');
 	return (0);
 }
