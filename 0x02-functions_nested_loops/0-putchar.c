@@ -3,6 +3,7 @@
 * main - prints _putchar
 *
 * return: 0 (success)
+*
 */
 int main(void)
 {
