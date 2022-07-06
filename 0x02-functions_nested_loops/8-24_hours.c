@@ -5,9 +5,12 @@
 */
 void jack_bauer(void)
 {
-int h1, h2;
-int m1, m2;
-int x = 9, h2 = 0;
+int h1;
+int h2;
+int m1;
+int m2;
+int x = 9;
+int h2 = 0;
 
 while (h2 <= 2)
 {
