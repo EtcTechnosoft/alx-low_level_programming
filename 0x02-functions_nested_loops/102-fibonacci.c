@@ -1,23 +1,28 @@
 #include <stdio.h>
 /**
-* main - code block
-* Description: prints sum of even-valued  number < 4,000,000
-* 
+* main - main code
+* Description: computes and prints the sum of all the multiples number
+*
 * Return: 0
 */
 int main(void)
 {
-	int x = 0, y = 1, num = 0;
-	int sum = 0;
+	int i = 0;
+	long int a = 0, b = 1, num;
 
-	while (num < 4000000)
+	while (i < 50)
 	{
-		num = x + y;
-		x = y;
-		y = num;
-		if (num % 2 == 0)
-			sum += num;
+		num = a + b;
+		a = b;
+		b = num;
+		printf("%lu", num);
+
+		if (i < 49)
+		{
+			printf(", ");
+		}
+		i++;
 	}
-	printf("%i\n", sum);
+	putchar('\n');
 	return (0);
 }
