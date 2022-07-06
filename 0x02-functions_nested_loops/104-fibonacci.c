@@ -2,7 +2,7 @@
 /**
 * main - main code
 * Description: prints the sum of all the multiples of a number
-* 
+*
 * Return:0
 */
 int main(void)
