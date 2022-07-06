@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main - code block
- * Description: prints sum of even-valued  number < 4,000,000
- * 
- * Return: 0
- */
+* main - code block
+* Description: prints sum of even-valued  number < 4,000,000
+* 
+* Return: 0
+*/
 int main(void)
 {
 	int x = 0, y = 1, num = 0;
@@ -16,7 +16,7 @@ int main(void)
 		x = y;
 		y = num;
 		if (num % 2 == 0)
-      sum += num;
+			sum += num;
 	}
 	printf("%i\n", sum);
 	return (0);
