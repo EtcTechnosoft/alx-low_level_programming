@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * _memset - loads a constant byte into memory
- * @s: memory area pointer
- * @b: constant byte to be loaded
- * @n: number of bytes to be loaded
+ * _memset - fills memory with a constant byte.
+ * @s: memory area pointer.
+ * @b: constant byte to be filled with
+ * @n: number of bytes to be filled
  * Return: char*
  */
 
-char *memset(char *s, char b, unsigned int n)
+char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i = 0;
 	while (i < n)
@@ -16,6 +16,5 @@ char *memset(char *s, char b, unsigned int n)
 		s[i] = b;
 		i++;
 	}
-
 	return (s);
 }
