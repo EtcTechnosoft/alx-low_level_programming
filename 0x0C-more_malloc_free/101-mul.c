@@ -3,6 +3,17 @@
 #include "main.h"
 
 /**
+ * _prntstr - prints a string
+ *
+ * @s: string to print
+ */
+void _prntstr(char *s)
+{
+	while (*s)
+		_putchar(*s++);
+}
+
+/**
  * is_digit - checks if a string contains a non-digit char
  * @s: string to be evaluated
  *
