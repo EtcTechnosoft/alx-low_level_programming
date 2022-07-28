@@ -1,4 +1,4 @@
-#include "makit.h"
+#include "main.h"
 
 /**
  * *_strcat - Concatenates two pointers
