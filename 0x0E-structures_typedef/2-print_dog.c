@@ -4,14 +4,14 @@
 /**
  * print_dog - print dog
  * @d: pointer to dog
- * Return: (void)
+ * Return: void
  */
 
 void print_dog(struct dog *d)
 {
-	if (d == 0)
+	if (d == NULL)
 		return;
-	if (d->name = 0)
+	if (d->name == 0)
 		printf("Name: (nil)\n");
 	else
 		printf("Name: %s\n", d->name);
