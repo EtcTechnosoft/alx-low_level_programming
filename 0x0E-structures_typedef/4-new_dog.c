@@ -2,14 +2,14 @@
 #include <stdlib.h>
 
 /**
- * new_dog - add another dog
- * @name: name of the dog
- * @age: age of the dog
- * @owner: name of the owner
+ * new_dog - makes a dog
  *
- * Return: pointer
+ * @name: dog's name
+ * @age: dog's age
+ * @owner: dog's owner
+ *
+ * Return: pointer to dog
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
@@ -21,13 +21,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
-	
+
 	for (len = 1, ptr = name; *ptr; len++)
 		ptr++;
 	d->name = malloc(len);
 	if (d->name == 0)
 	{
-		free (d);
+		free(d);
 		return (NULL);
 	}
 
@@ -41,7 +41,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (len = 0; *name != 0; len++; name++)
+	for (len = 0; *name != 0; len++, name++)
 		d->name[len] = *name;
 	d->name[len] = 0;
 	for (len = 0; *owner != 0; len++)
