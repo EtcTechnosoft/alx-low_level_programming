@@ -1,45 +1,44 @@
 #include "main.h"
 #include <unistd.h>
-#include <stdlib.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fcnt1.h>
+#include <fcntl.h>
+#include <stdlib.h>
 
 /**
- * read_textfiles - reads text file then prints it to the POSIX standard ouput
- * @filename: name of the file
- * @letters: the number of letters contained in the file
+ * read_textfile - reads a text file and prints it to the POSIX standard output
+ * @filename: name of the file to read
+ * @letters: number of letters it should read and print
  *
- * return: the output of the file
+ * Return: actual number of letters it could read and print
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	char *buf;
-	ssize_t relen, wrlen;
+	ssize_t lenr, lenw;
+	char *buffer;
 
 	if (filename == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
 	if (fd == -1)
 		return (0);
-	buf = malloc(sizeof(char) *letters);
-
-	if (buf == NUL)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 	{
 		close(fd);
 		return (0);
 	}
-	relen = read(fd, buf, letters);
+	lenr = read(fd, buffer, letters);
 	close(fd);
-	if (relen == -1)
+	if (lenr == -1)
 	{
-		free(buf);
+		free(buffer);
 		return (0);
 	}
-	wrlen = write(STDOUT_FILENO, buf, relen);
-	free(buf);
-	if (relen != wrlen)
+	lenw = write(STDOUT_FILENO, buffer, lenr);
+	free(buffer);
+	if (lenr != lenw)
 		return (0);
-	return (wrlen);
+	return (lenw);
 }
